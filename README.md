@@ -13,6 +13,56 @@
 
 - **High Performance**: Introduce `StaticContainer` and `Data Binding` by default. React will no longer diff entire huge Virtual DOM. *See Vjeux's slide [Animated — React Performance Toolbox](https://speakerdeck.com/vjeux/react-rally-animated-react-performance-toolbox) for more details*.
 
+## Getting started
+The building blocks are functions that returning element and event streams.
+
+```javascript
+function button(props) {
+  const clickEv$ = new Rx.Subject();
+  const element = (
+    <button onClick={clickEv$.onNext.bind(clickEv$)}>
+      {props.text}
+    </button>
+  );
+
+  return {
+    element,
+    events: {
+      clickEv$
+    }
+  }
+}
+```
+
+Compose these functions and you will get a function with root elements and event streams of the app.
+
+```javascript
+const {
+  element: App,
+  events
+} = app({
+  state$
+});
+
+ReactDOM.render(App, mountNode);
+```
+
+And then write code to handle these event streams, like dealing with store.
+```javascript
+function handleEvant(store, events) {
+  events.clickIncreaseButton$.subscribe(() => {
+    store.dispatch(/* ... */);
+  });
+}
+
+const store = configureStore();
+handleEvant(store, events);
+```
+
+**That's it!**
+
+See [examples](./examples) for complete app code.
+
 ## Feedbacks are welcome!
 Feel free to discuss via opening issues!
 
