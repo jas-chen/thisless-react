@@ -15,15 +15,10 @@ function handleEvant(store, events) {
     actions.decrement();
   });
 
-  function counterIsOdd() {
-    return store.getState().counter % 2 !== 0;
-  }
-
-  events
-    .incrementIfOdd$
-    .filter(counterIsOdd)
-    .subscribe(() => {
-      actions.increment();
+  events.incrementIfOdd$.subscribe(() => {
+      if (store.getState().counter % 2 !== 0) {
+        actions.increment();
+      }
     });
 
   events
