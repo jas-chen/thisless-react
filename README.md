@@ -67,7 +67,9 @@ See [examples](./examples) for complete app code.
 Feel free to discuss via opening issues!
 
 ## Inspiration
-[Cycle.js](http://cycle.js.org/), I borrowed lots of concepts from it.
+[Cycle.js](http://cycle.js.org/): I borrowed lots of concepts from it.
+
+[Angular](https://angular.io/): Don't create components all the time, `element + function` is good enough to get the job done.
 
 ## License
 The MIT License (MIT)
