@@ -9,7 +9,7 @@
 
 - **It's just React**: No magic! Use the technique you already know, without learning new library or API and plays well in your existing React apps.
 
-- **Pure View**: Completely decouple View from Model, code like `dispatch(action)` or `store.getState()` cannot be found in View.
+- **Pure View**: Completely decouple View from Model, no more Model injection. Code like `store.dispatch(action)` or `store.getState()` cannot be found in View.
 
 - **High Performance**: Introduce `StaticContainer` and `Data Binding` by default. React will no longer diff entire huge Virtual DOM. *See Vjeux's slide [Animated — React Performance Toolbox](https://speakerdeck.com/vjeux/react-rally-animated-react-performance-toolbox) for more details*.
 
