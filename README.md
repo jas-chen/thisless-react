@@ -11,7 +11,7 @@
 
 - **Pure View**: Completely decouple View from Model, code like `dispatch(action)` or `getState()` cannot be found in View.
 
-- **High Performance**: Introduce `StaticContainer` and `Data Binding` by default. React will no longer diff entire huge Virtual DOM. *See Vjeux's talk [Animated — React Performance Toolbox](https://speakerdeck.com/vjeux/react-rally-animated-react-performance-toolbox) on React Rally for more details*.
+- **High Performance**: Introduce `StaticContainer` and `Data Binding` by default. React will no longer diff entire huge Virtual DOM. *See Vjeux's slide [Animated — React Performance Toolbox](https://speakerdeck.com/vjeux/react-rally-animated-react-performance-toolbox) for more details*.
 
 ## Feedbacks are welcome!
 Feel free to discuss via opening issues!
