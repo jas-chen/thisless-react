@@ -1,0 +1,36 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@2.14.2
+3 info using node@v0.12.7
+4 verbose node symlink /usr/local/bin/node
+5 verbose run-script [ 'prestart', 'start', 'poststart' ]
+6 info prestart input-demo@0.1.0
+7 info start input-demo@0.1.0
+8 verbose unsafe-perm in lifecycle true
+9 info input-demo@0.1.0 Failed to exec start script
+10 verbose stack Error: input-demo@0.1.0 start: `webpack-dev-server --inline --colors`
+10 verbose stack Exit status 1
+10 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+10 verbose stack     at EventEmitter.emit (events.js:110:17)
+10 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+10 verbose stack     at ChildProcess.emit (events.js:110:17)
+10 verbose stack     at maybeClose (child_process.js:1015:16)
+10 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+11 verbose pkgid input-demo@0.1.0
+12 verbose cwd /Users/jas/GitHub/thisless-react/examples/input
+13 error Darwin 14.5.0
+14 error argv "node" "/usr/local/bin/npm" "start"
+15 error node v0.12.7
+16 error npm  v2.14.2
+17 error code ELIFECYCLE
+18 error input-demo@0.1.0 start: `webpack-dev-server --inline --colors`
+18 error Exit status 1
+19 error Failed at the input-demo@0.1.0 start script 'webpack-dev-server --inline --colors'.
+19 error This is most likely a problem with the input-demo package,
+19 error not with npm itself.
+19 error Tell the author that this fails on your system:
+19 error     webpack-dev-server --inline --colors
+19 error You can get their info via:
+19 error     npm owner ls input-demo
+19 error There is likely additional logging output above.
+20 verbose exit [ 1, true ]
