@@ -4,7 +4,7 @@ import counter from './components/counter';
 import configureStore from './store/configureStore';
 import * as CounterActions from './actions/counter';
 
-function handleEvant(store, events) {
+function handleEvent(store, events) {
   const actions = bindActionCreators(CounterActions, store.dispatch);
 
   events.increment$.subscribe(() => {
@@ -38,6 +38,6 @@ const {
   events
 } = counter(counter$);
 
-handleEvant(store, events);
+handleEvent(store, events);
 
 ReactDOM.render(Counter, document.getElementById('root'));

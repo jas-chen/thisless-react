@@ -49,14 +49,14 @@ ReactDOM.render(App, mountNode);
 
 And then write code to handle these event streams, like dealing with store.
 ```javascript
-function handleEvant(store, events) {
+function handleEvent(store, events) {
   events.clickIncreaseButton$.subscribe(() => {
     store.dispatch(/* ... */);
   });
 }
 
 const store = configureStore();
-handleEvant(store, events);
+handleEvent(store, events);
 ```
 
 **That's it!**

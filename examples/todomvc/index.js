@@ -7,7 +7,7 @@ import configureStore from './store/configureStore';
 import * as TodoActions from './actions/todos';
 import 'todomvc-app-css/index.css';
 
-function handleEvant(store, events) {
+function handleEvent(store, events) {
   const actions = bindActionCreators(TodoActions, store.dispatch);
 
   events.save$.subscribe(
@@ -45,7 +45,7 @@ const {
   todos$
 });
 
-handleEvant(store, events);
+handleEvent(store, events);
 
 ReactDOM.render(
   App,
