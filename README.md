@@ -7,11 +7,11 @@
 
 - **Fully Reactive**: With [RxJS](https://github.com/Reactive-Extensions/RxJS) and [React Reactive Class](https://github.com/jas-chen/react-reactive-class), components are made reactive and observable.
 
-- **It's just React**: No magic! Use the technique you already know, without learning new library or API and plays well in your existing React apps.
+- **It's just React**: No magic! Use the technique you already know, without learning new library or API and plays well with your existing React apps.
 
 - **Pure View**: Completely decouple View from Model, no more Model injection. Code like `store.dispatch(action)` or `store.getState()` cannot be found in View.
 
-- **High Performance**: Introduces `Static Component` and `Data Binding` by default. React will no longer diff entire huge Virtual DOM. *See Vjeux's slide [Animated — React Performance Toolbox](https://speakerdeck.com/vjeux/react-rally-animated-react-performance-toolbox) for more details*.
+- **High Performance**: Introduce `Static Component` and `Data Binding` by default. React will no longer diff entire huge Virtual DOM. *See Vjeux's slide [Animated — React Performance Toolbox](https://speakerdeck.com/vjeux/react-rally-animated-react-performance-toolbox) for more details*.
 
 ## Getting started
 The building blocks are functions that returning element and event streams.
