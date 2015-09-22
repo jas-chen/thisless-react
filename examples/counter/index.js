@@ -16,10 +16,10 @@ function handleEvent(store, events) {
   });
 
   events.incrementIfOdd$.subscribe(() => {
-      if (store.getState().counter % 2 !== 0) {
-        actions.increment();
-      }
-    });
+    if (store.getState().counter % 2 !== 0) {
+      actions.increment();
+    }
+  });
 
   events
     .incrementAsync$
