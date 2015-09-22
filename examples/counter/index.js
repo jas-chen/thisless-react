@@ -33,10 +33,7 @@ function handleEvent(store, events) {
 const store = configureStore();
 const counter$ = store.state$.map(state => state.counter);
 
-const {
-  element: Counter,
-  events
-} = counter(counter$);
+const { element: Counter, events } = counter(counter$);
 
 handleEvent(store, events);
 

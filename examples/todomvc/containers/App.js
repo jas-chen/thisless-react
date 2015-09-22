@@ -2,12 +2,12 @@ import React from 'react';
 import header from '../components/Header';
 import mainSection from '../components/MainSection';
 
-function app({todos$}) {
+function app(props) {
+  const { todos$ } = props;
+
   const {
     element: Header,
-    events: {
-      save$
-    }
+    events: { save$ }
   } = header();
 
   const {

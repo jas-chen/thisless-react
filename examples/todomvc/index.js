@@ -38,16 +38,8 @@ function handleEvent(store, events) {
 const store = configureStore();
 const todos$ = store.state$.map(state => state.todos);
 
-const {
-  element: App,
-  events
-} = app({
-  todos$
-});
+const { element: App, events } = app({ todos$ });
 
 handleEvent(store, events);
 
-ReactDOM.render(
-  App,
-  document.getElementById('root')
-);
+ReactDOM.render(App, document.getElementById('root'));
