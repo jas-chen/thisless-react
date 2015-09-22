@@ -51,7 +51,6 @@ function footer(props) {
 
   const hasTodo$ = todos$.map(todos => !!todos.length);
   const clearCompleted$ = new Subject();
-  const onShow$ = new Subject();
 
   const element = (
     <Footer className="footer" mount={hasTodo$}>
