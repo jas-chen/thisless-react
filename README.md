@@ -1,6 +1,6 @@
-# Thisless React
+# thisless React
 
-> Reactive React application flow, with RxJS, React and Redux.
+> Reactive React application flow, with React, RxJS and Redux.
 
 ## It is all about...
 - **thisless**: `this` cannot be found in [examples](./examples)!
