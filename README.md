@@ -63,6 +63,9 @@ handleEvent(store, events);
 
 See [examples](./examples) for complete app code.
 
+## Tip about Redux middleware
+There is no restrictions on how to use Redux in your app, but I highly recommend use RxJS stream to replace middleware, it [handles async operations well](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/promises.md) and in this way your application flow will become clear and straightforward.
+
 ## Feedbacks are welcome!
 Feel free to discuss via opening issues!
 
