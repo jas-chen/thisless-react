@@ -14,7 +14,7 @@
 - **High Performance**: Introduce `Static Component` and `Data Binding` by default. React will no longer diff entire huge Virtual DOM. *See Vjeux's slide [Animated — React Performance Toolbox](https://speakerdeck.com/vjeux/react-rally-animated-react-performance-toolbox) for more details*.
 
 ## Getting started
-The building blocks are functions that returning element and event streams.
+The building blocks are functions that returning element node and event streams.
 
 ```javascript
 function button(props) {
@@ -34,20 +34,18 @@ function button(props) {
 }
 ```
 
-Compose these functions and you will get a function with root elements and event streams of the app.
+Compose these functions and eventually you will get a function with root element node and event streams of the app.
 
 ```javascript
-const {
-  element: App,
-  events
-} = app({
-  state$
-});
+const store = configureStore();
+
+const { element: App, events } = app({ store.state$ });
 
 ReactDOM.render(App, mountNode);
 ```
 
-And then write code to handle these event streams, like dealing with store.
+And then write code to handle these event streams, like dealing with store or interacting with the browser.
+
 ```javascript
 function handleEvent(store, events) {
   events.clickIncreaseButton$.subscribe(() => {
@@ -55,7 +53,6 @@ function handleEvent(store, events) {
   });
 }
 
-const store = configureStore();
 handleEvent(store, events);
 ```
 
@@ -64,10 +61,10 @@ handleEvent(store, events);
 See [examples](./examples) for complete app code.
 
 ## Tip about Redux middleware
-There is no restrictions on how to use Redux in your app, but I highly recommend use RxJS stream to replace middleware, it [handles async operations well](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/promises.md) and in this way your application flow will become clear and straightforward.
+There is no restrictions on how to use Redux in your thisless React app, but I highly recommend use RxJS stream to replace middleware, it [handles async operations well](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/promises.md) and in this way your application flow will become [more clear and straightforward](./examples/counter/index.js#L24-L29).
 
 ## Feedbacks are welcome!
-Feel free to discuss via opening issues!
+Feel free to discuss via opening issues or send pull requests!
 
 ## Inspirations
 [Cycle.js](http://cycle.js.org/): I borrowed lots of concepts from it.
