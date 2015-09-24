@@ -45,13 +45,17 @@ function mainSection(props) {
 
   const {
     element: Footer,
-    events: { clearCompleted$ }
+    events: {
+      switchFilter$,
+      clearCompleted$
+    }
   } = footer({
     todos$,
     completedCount$,
-    filter$,
-    onShow
+    filter$
   });
+
+  switchFilter$.subscribe(onShow);
 
   const element = (
     <section className="main">

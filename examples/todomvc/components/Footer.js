@@ -52,12 +52,13 @@ function renderFilterLink(filter, selectedFilter$, onShow) {
 }
 
 function footer(props) {
-  const { todos$, completedCount$, filter$, onShow } = props;
+  const { todos$, completedCount$, filter$ } = props;
   const activeCount$ = todos$.map(
     todos => todos.filter(todo => !todo.completed).length
   );
 
   const hasTodo$ = todos$.map(todos => !!todos.length);
+  const switchFilter$ = new Subject();
   const clearCompleted$ = new Subject();
 
   const element = (
@@ -66,7 +67,9 @@ function footer(props) {
       <Ul className="filters">
         {[SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED].map(filter =>
           <Li key={filter}>
-            {renderFilterLink(filter, filter$, onShow)}
+            {renderFilterLink(
+              filter, filter$, switchFilter$.onNext.bind(switchFilter$)
+            )}
           </Li>
         )}
       </Ul>
@@ -81,6 +84,7 @@ function footer(props) {
   return {
     element,
     events: {
+      switchFilter$,
       clearCompleted$
     }
   };
