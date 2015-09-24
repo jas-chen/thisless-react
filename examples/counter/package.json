@@ -17,7 +17,7 @@
   "dependencies": {
     "react": "^0.14.0-rc1",
     "react-dom": "^0.14.0-rc1",
-    "react-reactive-class": "^1.0.0",
+    "react-reactive-class": "^1.0.1",
     "redux": "^3.0.0",
     "rx-lite": "^3.1.2"
   },
