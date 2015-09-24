@@ -1,9 +1,9 @@
-import { Subject } from 'rx';
+import { BehaviorSubject } from 'rx';
 
 export function initSubject(initValue) {
-  const subject = new Subject();
+  const subject = new BehaviorSubject(initValue);
   return {
-    $: subject.startWith(initValue),
+    $: subject,
     onNext: subject.onNext.bind(subject)
   }
 }
