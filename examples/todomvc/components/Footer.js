@@ -10,15 +10,7 @@ const FILTER_TITLES = {
   [SHOW_COMPLETED]: 'Completed'
 };
 
-const {
-  a:A,
-  span: Span,
-  strong: Strong,
-  button: Button,
-  footer: Footer,
-  ul: Ul,
-  li:Li
-} = dom;
+const { a:A, span: Span, strong: Strong, button: Button, footer: Footer } = dom;
 
 function renderTodoCount(activeCount$) {
   const itemWord$ = activeCount$.map(activeCount => {
@@ -30,9 +22,9 @@ function renderTodoCount(activeCount$) {
   );
 
   return (
-    <Span className="todo-count">
+    <span className="todo-count">
       <Strong>{activeCountWord$}</Strong> <Span>{itemWord$}</Span> left
-    </Span>
+    </span>
   );
 }
 
@@ -64,15 +56,15 @@ function footer(props) {
   const element = (
     <Footer className="footer" mount={hasTodo$}>
       {renderTodoCount(activeCount$)}
-      <Ul className="filters">
+      <ul className="filters">
         {[SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED].map(filter =>
-          <Li key={filter}>
+          <li key={filter}>
             {renderFilterLink(
               filter, filter$, switchFilter$.onNext.bind(switchFilter$)
             )}
-          </Li>
+          </li>
         )}
-      </Ul>
+      </ul>
       <Button className="clear-completed"
               mount={completedCount$.map(count => !!count)}
               onClick={clearCompleted$.onNext.bind(clearCompleted$)} >
