@@ -38,8 +38,12 @@ Compose these functions and eventually you will get a function with root element
 
 ```javascript
 const store = configureStore();
+const { state$ } = store;
 
-const { element: App, events } = app({ store.state$ });
+const {
+  element: App,
+  events
+} = app(state$);
 
 ReactDOM.render(App, mountNode);
 ```
