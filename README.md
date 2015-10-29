@@ -65,7 +65,7 @@ handleEvent(store, events);
 See [examples](./examples) for complete app code.
 
 ## Tip about Redux middleware
-There is no restrictions on how to use Redux in your thisless React app, but I highly recommend using RxJS streams to replace middleware, it [handles async operations well](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/promises.md) and in this way your application flow will become [more clear and straightforward](./examples/counter/index.js#L24-L29) (and you write less code!).
+There is no restrictions on how to use Redux in your thisless React app, but I highly recommend using RxJS streams to replace middleware, they [handles async operations well](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/promises.md) and in this way your application flow will become [more clear and straightforward](./examples/counter/index.js#L24-L29) (and you write less code!).
 
 ## Feedbacks are welcome!
 Feel free to discuss via opening issues or send pull requests!
