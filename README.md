@@ -1,5 +1,7 @@
 # thisless React
 
+[![Join the chat at https://gitter.im/jas-chen/thisless-react](https://badges.gitter.im/jas-chen/thisless-react.svg)](https://gitter.im/jas-chen/thisless-react?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 > Reactive React application flow, with React, RxJS and Redux.
 
 ## It is all about...
